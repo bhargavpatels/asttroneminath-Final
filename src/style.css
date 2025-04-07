@@ -1,0 +1,763 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+/* Variables */
+:root {
+  --primary-color: #E2C452;
+  --primary-dark: #cbb03e;
+  --primary-rgb: 226, 196, 82;
+  --text-color: #292929;
+  --bg-color: #f9f9f9;
+  --white: #fff;
+  --dark: #292929;
+}
+
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #292929;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth; /* Enable smooth scrolling for the whole page */
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.title_box h2 {
+  position: relative;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.title_box h2 span {
+  color: #E2C452;
+}
+
+section {
+  padding: 80px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #E2C452;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: #cbb03e;
+  transform: translateY(-3px);
+}
+
+/* Section Visibility Control */
+.section-hidden {
+  display: none !important;
+}
+
+/* Section Toggle Button */
+.section-toggle {
+  background-color: #E2C452;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.section-toggle:hover {
+  background-color: #cbb03e;
+}
+
+.toggle-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Restore all sections visibility */
+.intro_main,
+.about_main,
+.features_main,
+.tracking_stay_designed,
+.download_main,
+.contact_main,
+footer {
+  display: block;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  padding: 15px 0;
+}
+
+.main_logo .navbar-brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: #E2C452;
+}
+
+.navbar-nav .nav-link {
+  padding: 0 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #292929;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #E2C452;
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Hero Section */
+.intro_main {
+  background-color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider_text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #E2C452;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.slider_text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.slider_text p span {
+  display: block;
+}
+
+/* Info Boxes */
+.info_boxes_section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.info_boxes {
+  margin-top: 0;
+}
+
+.info_box {
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Red line above info boxes */
+.info_box::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  width: 40%;
+  height: 3px;
+  background-color: #E2C452;
+}
+
+.info_box:hover {
+  transform: translateY(-5px);
+}
+
+.info_box i {
+  font-size: 40px;
+  color: #E2C452;
+  margin-bottom: 15px;
+}
+
+.info_box h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+/* About Section */
+.about_main {
+  background-color: #f9f9f9;
+}
+
+.about_text p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* App Boxes Section Styling */
+.app_boxes {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.app_boxes a {
+  margin-right: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.app_boxes a:hover {
+  transform: translateY(-3px);
+}
+
+.app_boxes img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* Features Section */
+.features_main {
+  background-color: #fff;
+}
+
+.features_box ul {
+  padding-left: 25px;
+}
+
+.features_box ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+
+.features_box ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #E2C452;
+  border-radius: 50%;
+}
+
+/* Additional Features */
+.tracking_stay_designed {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.boxes {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.boxes h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.boxes h3 span {
+  color: #E2C452;
+}
+
+.boxes ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.boxes ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #E2C452;
+  border-radius: 50%;
+}
+
+/* Application Section */
+.download_main {
+  background-color: #292929;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.download_main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.download_main .container {
+  position: relative;
+  z-index: 1;
+}
+
+.download_main .title_box h2 {
+  color: #fff;
+}
+
+.download_main p {
+  margin-bottom: 25px;
+}
+
+/* Contact Section */
+.contact_main {
+  background-color: #fff;
+}
+
+.contact_form_box {
+  padding: 30px;
+}
+
+.contact_form .form-control {
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.contact_form textarea.form-control {
+  height: 150px;
+}
+
+.contact_form .submit-btn {
+  background-color: #E2C452;
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact_form .submit-btn:hover {
+  background-color: #cbb03e;
+}
+
+/* Footer */
+footer {
+  background-color: #292929;
+  color: #fff;
+  padding: 50px 0 20px;
+  text-align: center;
+}
+
+.footer_logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #E2C452;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.social_box {
+  margin: 20px 0;
+}
+
+.social_box ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.social_box ul li {
+  margin: 0 10px;
+}
+
+.social_box ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social_box ul li a:hover {
+  background-color: #E2C452;
+}
+
+.links {
+  margin: 20px 0;
+}
+
+.links ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.links ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.links ul li a:hover {
+  color: #E2C452;
+}
+
+.copyright p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #a1a2a9;
+}
+
+/* Responsive Styles */
+/* Large Desktops (>=1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .slider_text h1 {
+    font-size: 52px;
+  }
+}
+
+/* Desktops (992px - 1199px) */
+@media (max-width: 1199px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .slider_text h1 {
+    font-size: 42px;
+  }
+
+  .title_box h2 {
+    font-size: 30px;
+  }
+
+  .info_box {
+    padding: 25px 15px;
+  }
+
+  .info_box i {
+    font-size: 36px;
+  }
+}
+
+/* Tablets and Small Desktops (768px - 991px) */
+@media (max-width: 991px) {
+  section {
+    padding: 65px 0;
+  }
+
+  .slider_text h1 {
+    font-size: 36px;
+  }
+
+  .navbar-nav {
+    padding: 15px 0;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    display: inline-block;
+  }
+
+  .intro_main {
+    padding: 60px 0;
+  }
+
+  .about_text, .features_box {
+    margin-top: 30px;
+  }
+
+  .boxes {
+    margin-bottom: 20px;
+  }
+
+  .contact_form_box {
+    margin-top: 30px;
+  }
+}
+
+/* Large Mobile Phones (576px - 767px) */
+@media (max-width: 767px) {
+  section {
+    padding: 50px 0;
+  }
+
+  .slider_text h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .slider_text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .title_box h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .app_boxes {
+    flex-direction: row; /* Change from column to row */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Add space between buttons */
+  }
+
+  .app_boxes a {
+    margin-bottom: 0; /* Remove bottom margin */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .info_box,
+  .boxes {
+    margin-bottom: 30px;
+  }
+
+  .info_boxes {
+    margin-top: 0;
+  }
+
+  .contact_form_box {
+    padding: 20px 15px;
+  }
+
+  .social_box ul li {
+    margin: 0 8px;
+  }
+
+  .links ul li {
+    margin: 5px 10px;
+  }
+
+  /* Add image handling for better mobile display */
+  .intro_main .hero-image {
+    margin-top: 30px;
+  }
+
+  /* Improve spacing in contact form on mobile */
+  .contact_form .row + .row {
+    margin-top: 5px !important;
+  }
+
+  /* Adjust back to top button for mobile */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+/* Small Mobile Phones (< 576px) */
+@media (max-width: 575px) {
+  section {
+    padding: 40px 0;
+  }
+
+  .slider_text h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .slider_text p {
+    font-size: 15px;
+  }
+
+  .title_box h2 {
+    font-size: 22px;
+  }
+
+  .about_text p, .boxes ul li {
+    font-size: 15px;
+  }
+
+  .boxes h3 {
+    font-size: 18px;
+  }
+
+  .info_box {
+    padding: 20px 15px;
+  }
+
+  .info_box i {
+    font-size: 32px;
+  }
+
+  .info_box h4 {
+    font-size: 16px;
+  }
+
+  .navbar-brand span {
+    font-size: 18px;
+  }
+
+  .features_box ul li {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .features_box ul li:before {
+    top: 7px;
+    width: 8px;
+    height: 8px;
+  }
+
+  footer {
+    padding: 40px 0 15px;
+  }
+
+  .footer_logo a {
+    font-size: 20px;
+  }
+
+  .contact_form .submit-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  /* Better handling for multiple columns on mobile */
+  .contact_form .col-md-6 + .col-md-6 {
+    margin-top: 10px;
+  }
+
+  /* Adjust the navigation toggler for better mobile experience */
+  .navbar-toggler {
+    padding: 4px 8px;
+  }
+
+  /* Improve the appearance of the social icons on small screens */
+  .social_box ul li a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* Adjust back to top button for small mobile */
+  .back-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* Tiny Mobile Phones (< 400px) */
+@media (max-width: 399px) {
+  .slider_text h1 {
+    font-size: 20px;
+  }
+
+  .navbar-brand span {
+    font-size: 16px;
+  }
+
+  .title_box h2 {
+    font-size: 20px;
+  }
+
+  .boxes {
+    padding: 20px 15px;
+  }
+
+  .links ul {
+    flex-direction: column;
+  }
+
+  .links ul li {
+    margin: 5px 0;
+  }
+
+  /* Adjust app boxes for very small screens */
+  .app_boxes img {
+    max-height: 40px;
+  }
+}
+
+
