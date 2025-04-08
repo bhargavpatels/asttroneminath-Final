@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('.nav-link');
+  const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
 
   navLinks.forEach(link => {
     link.addEventListener('click', function(this: HTMLAnchorElement, e: Event) {
@@ -29,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
             top: elementPosition - 80,
             behavior: 'smooth'
           });
+
+          // Close the mobile menu after clicking
+          if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+          }
         }
       }
     });
@@ -106,3 +112,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
